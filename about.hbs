@@ -1,0 +1,32 @@
+{{!-- Edits to the about page in the Ghost Solo theme --}}
+
+{{!< default}}
+<main id="main">
+    <section class="p-outer">
+        <div class="p-inner p-hero">
+            <div class="p-hero-left">
+                {{!-- About page explanation --}}
+                <div>
+                    <p>I'm Marcus, and this is my personal website. I'll post 
+                        here on topics that are interesting to me ranging from 
+                        quantitative finance to global politics. My hope is for 
+                        others to propel their own interests through anything 
+                        they might find inspiring here.</p>
+                </div>
+            </div>
+
+            {{! Loads the cover image as defined in Ghost admin }}
+            <div class="p-hero-right">
+            <img src="{{img_url @site.cover_image size="m"}}" 
+            alt="Profile picture" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+</main>
