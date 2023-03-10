@@ -1,5 +1,6 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
 @import "fonts.css";
+@import "about.css";
 
 .image-div > img {
     max-width: 100%;
