@@ -1,0 +1,43 @@
+{{!< default}}
+
+<main id="main">
+    <section class="p-outer">
+        <div class="p-inner p-hero">
+            <div class="p-hero-left">
+
+            <div>
+                <h1>Hey there 👋🏽</h1>
+                <p>I'm Marcus, and welcome to my personal website.</p>
+                <p>I post regularly about a range of topics interesting to me from international relations to quantitative finance. </p>
+            </div>
+
+            <div class="p-hero-buttons">
+                {{! Launches the Ghost membership portal }}
+                <button data-portal="signup">Subscribe</button>
+                {{! Link to an about page }}
+                <a href="/about/">Learn more &rarr;</a>
+            </div>
+            </div>
+            <div class="p-hero-right">
+            {{! Loads the your cover image as defined in Ghost admin }}
+            <img src="{{img_url @site.cover_image size="m"}}" alt="Profile picture" />
+            </div>
+        </div>
+    </section>
+    <section class="p-outer">
+        <div class="p-inner">
+            <h1 style="margin-bottom:3cm;">Latest Articles</h1>
+            {{!-- <p style="margin-bottom:3cm;">This is the first question?</p> --}}
+            <div class="p-posts-grid">
+                {{! Use the foreach helper to loop through available posts }}
+                {{#foreach posts}}
+                <article class="p-post-card">
+                    {{! Use the img_url helper to bring in the post's feature image. }}
+                    <img src="{{img_url feature_image size="m"}}" alt="{{feature_image_alt}}" />
+                    <h3><a href="{{url}}">{{title}}</a></h3>
+                </article>
+                {{/foreach}}
+            </div>
+        </div>
+    </section>
+</main>
